@@ -1,0 +1,72 @@
+:root
+{
+    --backgroundcolor: rgb(255, 136, 0);
+    --selectetbacgroundcolor: rgb(174, 93, 0);
+}
+body
+{
+    background-color: rgb(21, 21, 21);
+    font-family: 'Lato', sans-serif;
+}
+#topic
+{
+    width: auto;
+    height: 400px;
+    color: var(--selectetbacgroundcolor);
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    
+}
+#button_Clicke_Me
+{
+    width: 200px;
+    height: 40px;
+
+    background-color: var(--backgroundcolor);
+    border-radius: 10px;
+    border-color: var(--selectetbacgroundcolor);
+    position: absolute;
+    top: 150px;
+}
+#button_Clicke_Me:hover
+{
+    background-color:var(--selectetbacgroundcolor);
+}
+#bubleconteiner
+{
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    bottom: 0px;
+
+    overflow: hidden;
+    pointer-events: none;
+}
+.bubble
+{
+    width: max(300px, 30vw);
+    height: max(300px, 30vw);
+
+    background-color: var(--backgroundcolor);
+    border-radius: 100%;
+
+    position: absolute;
+    left: 50%;
+    top: 100%;
+
+    animation: wave 2s ease-in-out infinite;
+}
+@keyframes wave 
+{
+    from, to 
+    {
+        transform: translate(-50%, 0%);
+    }
+
+    50% 
+    {
+        transform: translate(-50%, -20%);
+    }
+}
